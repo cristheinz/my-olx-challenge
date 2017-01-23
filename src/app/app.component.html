@@ -1,3 +1,46 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand icon website big" href="#"></a>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link text-primary" href="#">Menu 1</a>
+      <a class="nav-item nav-link text-primary" href="#">Menu 2</a>
+      <a class="nav-item nav-link text-primary" href="#">Menu 3</a>
+      <a class="nav-item nav-link text-primary" href="#">Menu 4</a>
+    </div>
+  </div>
+</nav>
+
+<section class="container-fluid bg-faded">
+  <p class="text-muted font-italic">Lorem ipsum</p>
+
+  <ul class="hidden-md-down">
+    <li *ngFor="let item of items">
+      <div class="card card-inverse mb-3 text-center" [ngClass]="{'bg-inverse': item.isActive}">
+        <div class="card-block invisible" style="height: 310px;">{{item.name}}</div>
+      </div>
+    </li>
+  </ul>
+  <div class="row hidden-lg-up">
+    <div *ngFor="let item of items" class="col-lg-4 col-md-6">
+      <div class="card card-inverse mb-3 text-center" [ngClass]="{'bg-inverse': item.isActive}">
+        <div class="card-block invisible" style="height: 310px">{{item.name}}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <nav class="navbar navbar-light bg-inverse">
+    <div class="navbar-nav">
+      <div class="row">
+        <a href="#" class="nav-item nav-link col-md-2 text-white">Footer 1</a>
+        <a href="#" class="nav-item nav-link col-md-2 text-white">Footer 2</a>
+        <a href="#" class="nav-item nav-link col-md-2 text-white">Footer 3</a>
+        <a href="#" class="nav-item nav-link col-md-2 offset-md-4 text-white">Copyright</a>
+      </div>
+    </div>
+  </nav>
+</footer>
