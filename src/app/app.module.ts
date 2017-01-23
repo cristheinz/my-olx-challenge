@@ -8,6 +8,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ItemsComponent } from './items/items.component';
 
+import { ItemsService } from './items/items.service';
+
 const ROUTES = [
   {
     path: '',
@@ -31,7 +33,7 @@ const ROUTES = [
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [ItemsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
