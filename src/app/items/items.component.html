@@ -1,0 +1,18 @@
+<section class="container-fluid bg-faded">
+  <p class="text-muted font-italic">Lorem ipsum</p>
+
+  <ul class="hidden-md-down">
+    <li *ngFor="let item of items">
+      <div class="card card-inverse mb-3 text-center" [ngClass]="{'bg-inverse': item.isActive}">
+        <div class="card-block invisible" style="height: 310px;">{{item.name}}</div>
+      </div>
+    </li>
+  </ul>
+  <div class="row hidden-lg-up">
+    <div *ngFor="let item of items" class="col-lg-4 col-md-6">
+      <div class="card card-inverse mb-3 text-center" [ngClass]="{'bg-inverse': item.isActive}">
+        <div class="card-block invisible" style="height: 310px">{{item.name}}</div>
+      </div>
+    </div>
+  </div>
+</section>
