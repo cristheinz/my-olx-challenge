@@ -2,10 +2,10 @@ import { browser, element, by } from 'protractor';
 
 export class MyOlxChallengePage {
   navigateTo() {
-    return browser.get('/');
+    return browser.get('/items');
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('app-root p')).getText();
   }
 }

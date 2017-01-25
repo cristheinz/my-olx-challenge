@@ -7,8 +7,8 @@ describe('my-olx-challenge App', function() {
     page = new MyOlxChallengePage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display message saying Lorem ipsum', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Lorem ipsum');
   });
 });

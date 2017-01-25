@@ -10,7 +10,14 @@ describe('ItemsService', () => {
     });
   });
 
-  it('should ...', inject([ItemsService], (service: ItemsService) => {
+  it('should create', inject([ItemsService], (service: ItemsService) => {
     expect(service).toBeTruthy();
+  }));
+
+  it('should get items', inject([ItemsService], (service: ItemsService) => {
+    service.getItems().then(items => {
+      expect(items.length).toEqual(6);
+    });
+    
   }));
 });
